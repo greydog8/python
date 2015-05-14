@@ -3,13 +3,33 @@ reset = '\033[0m'
 clear = '\033[H\033[2J'
 
 import time
-
-hundredths = 1
+weeks = 0
+days = 0
+hours = 0
+minutes = 0
+seconds = 0
+hundredths = 0
 print(clear)
-while True:
-    time.sleep(0.01)
-    print(clear)
-    print('[ctrl + c to stop]' + reset, end=': ')
-    print(hundredths)
-    hundredths +=1
+try:
+    while True:
+        time.sleep(0.01)
+        print(clear)
+        print('{} weeks {} days {}:{}:{}.{}'.format(weeks,days,hours,minutes,seconds,hundredths))
+        '''
+        print('minutes')
+        print(minutes)
+        print('seconds:')
+        print(seconds)
+        print('hundredths:')
+        print(hundredths)
+        '''
+        hundredths +=1
+        if hundredths == 100:
+            seconds +=1
+            hundredths = 0
+        if seconds == 60:
+            minutes +=1
+            seconds = 0
+except KeyboardInterrupt:
+    exit()
 
