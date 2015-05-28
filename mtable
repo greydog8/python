@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+c.clear_screen()
+
+print(c.red + 'mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmultiplication tables' + c.reset)
+
+
+number1 = input(c.green +  "first number " + c.reset )
+
+print(c.blue + 'ok so your first number is ' + number1 + c.reset )
+
+
+for m in range(12,0,-1):
+    
+
+    product = int(number1) * m
+
+    form = '{} x {} = {}'
+
+    print(c.red + form.format(number1,m,product))
