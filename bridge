@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+
+def ask(question):
+    print(c.red + question + c.reset)
+    answer = input('>' + c.base3).lower().strip()
+    print(c.reset)
+    return answer
+
+def live ():
+    print('right, off you go then')
+
+def die ():
+    print('tho art cast into the gorge of eternal peril')
+
+
+print(c.clear)
+
+print(c.orange + '''who would cross the bridge of death
+must answer me these questions three
+'Ere the other side he see''' + c.reset)
+
+name = ask('what is your name? ')
+
+quest =ask('What is your quest? ' )
+
+if name in ['lancelot','galahad']:
+    color = ask('What is your favorite color? ' )
+    if color == 'blue':
+        live()
+    else:
+         die()
+
+elif name == 'robin': 
+    captial = ask('what is the captial of assyria? ')
+    if captial == 'assur':
+        live()
+
+    else:
+        die()
+
+
+elif name == 'arthor':
+    swallow = ask('what is the air speed velocity of a aferican swallow? ')
+
+    if swallow == '24 mph':
+        live()
+    else:
+        die()

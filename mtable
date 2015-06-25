@@ -12,7 +12,7 @@ number1 = input(c.green +  "first number " + c.reset )
 print(c.blue + 'ok so your first number is ' + number1 + c.reset )
 
 
-for m in range(12,0,-1):
+for m in range(10000000000000,0,-1):
     
 
     product = int(number1) * m
