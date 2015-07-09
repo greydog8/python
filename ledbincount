@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+import time
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BCM)
+pins = [26,12,24,18]
+
+for pin in pins:
+	GPIO.setup(pin,GPIO.OUT)
+
+def turn_off(pin):
+    GPIO.output(pin, GPIO.LOW)
+def turn_on(pin):
+    GPIO.output(pin, GPIO.HIGH)
+
+count = 0
+binform = "{:04b}"
+
+while True:
+    binstr = "{:04b}".format(count)
+    last = len(binstr)
+    last_four = binstr[last-4:last]
+    for index in range(4):
+        print(last_four[index])
+        if int(last_four[index]) == 0:
+            turn_off(pins[index])
+        else:
+            turn_on(pins[index])
+    print(last_four)
+    
+    count += 1    
+    time.sleep(1)
+
+
