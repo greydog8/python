@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+import colors as c
+import time
+count = 0
+binform = "{:04b}"
+form = c. clear + c.yellow + binform + c.reset
+
+while True:
+    binstr = "{:04b}".format(count)
+    last = len(binstr)
+    last_four = binstr[last-4:last]
+    print(c.clear + last_four + c.reset)
+    
+    count += 1    
+    time.sleep(0.1)
+
+
