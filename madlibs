@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+
+import colors as c
+from utils import ask
+
+print(c.clear +"welcome to madlib")
+
+
+text = '''
+    I enjoy going to {noun1} and {verb1}
+    i like {noun2} that is {adj1} my favroit celebirty is {a celebirty}
+    i start to cry when i see {noun3 or color}
+    i like to eat {food} with my friend {friends name} one day when i was {a room in a house}
+    and a {noun4} hit my face a {animal} came and {action1} my {body part} then i 
+    drank {a liquid} and i {action2} {a person} then i {action3} {celebirty2}
+    and i ate {noun5}         
+
+
+
+    THE END :P
+    '''
+       
+
+
+
+words = {
+    "noun1" : None,
+    "verb1" : None,
+    "noun2" : None,
+    "adj1" : None, 
+    "a celebirty" : None,
+    "noun3 or color" : None,
+    "food" : None,
+    "friends name" : None,
+    "a room in a house" : None,
+    "noun4" : None,
+    "animal" : None,
+    "action1" : None,
+    "body part" : None,
+    "a liquid" : None,
+    "action2" : None,
+    "a person" : None,
+    "action3" : None,
+    "celebirty2" : None,
+    "noun5" : None,
+}
+
+
+
+for keyword in words:
+    answer = ask(keyword + ': ')
+    words[keyword] = answer
+
+
+print(c.clear + text.format(**words))
