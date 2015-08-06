@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+import colors as c
+import time
+print(c.clear)
+
+waffle = input(c.o + 'do you like waffles? ' + c.x )
+
+if waffle == 'yes':  
+    pancakes = input(c.b + 'do you like pancakes? ' + c.x)
+
+elif waffle == 'no':
+    print(c.r + 'well i like waffles so bye' + c.x )
+    time.sleep (0.75)
+    exit()
+
+else:
+    print(c.m + 'wut' + c.x )
+    time.sleep (.25)
+    exit()
+
+
+
+
+
+waffle = input(c.o + 'do you like waffles? ' + c.x )
+
+if waffle == 'yes':  
+    pancakes = input(c.b + 'do you like pancakes? ' + c.x)
+
+elif waffle == 'no':
+    print(c.r + 'well i like waffles so bye' + c.x )
+    time.sleep (0.75)
+    exit()
+
+else:
