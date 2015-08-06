@@ -22,14 +22,37 @@ else:
 
 
 
-waffle = input(c.o + 'do you like waffles? ' + c.x )
 
-if waffle == 'yes':  
-    pancakes = input(c.b + 'do you like pancakes? ' + c.x)
 
-elif waffle == 'no':
-    print(c.r + 'well i like waffles so bye' + c.x )
+ 
+if pancakes == 'yes':
+    french_tost = input(c.g +'do you like french_tost ' + c.x )
+
+elif pancakes == 'no':
+    print(c.r + 'well i like pancakes so bye' + c.x )
     time.sleep (0.75)
     exit()
 
 else:
+    print(c.m + 'wut' + c.x )
+    time.sleep (.25)
+    exit()
+
+ 
+
+
+
+if french_tost == 'yes':
+    print(c.m + ':D' + c.x)
+    time.sleep (1)
+    exit()
+
+elif french_tost  == 'no':
+    print(c.r + 'well i like french tost so bye' + c.x )
+    time.sleep (0.75)
+    exit()
+
+else:
+    print(c.m + 'wut' + c.x )
+    time.sleep (.25)
+    exit()
